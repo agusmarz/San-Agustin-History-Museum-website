@@ -42,6 +42,7 @@ h1 {
 .title-container {
 	display: flex;
 	flex-direction: column;
+	margin-bottom: 3vh;
 }
 
 .title-container h2 {
@@ -290,7 +291,7 @@ textarea {
 	display: grid;
 	font-family: 'Trebuchet MS', sans-serif;
 	height: 330px;
-	margin: 20px auto;
+	margin: 3vh auto;
 	width: 70%;
 }
 

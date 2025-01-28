@@ -1,22 +1,87 @@
-
-
-.presentación-pr{
+.presentación-pr {
   width: 35vw;
   margin: 10vh 0 0 5vw;
 }
 
-
-@media (max-width: 1728px) {
-  .presentación-pr{
-    width: 70vw;
-    margin: 10vh 15vw 0 15vw;
+@media screen and (max-width: 768px) {
+  .presentación-pr {
+    width: 90vw;
+    margin: 10vh 0 0 5vw;
   }
+
 }
 
-img {
-  object-fit: cover;
+.cards {
+  width: 100%;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1rem;
+  /* Añadir un gap para el espacio entre las cartas */
+}
 
-  vertical-align: middle;
+.cards__item {
+  display: flex;
+  padding: 1rem;
+}
+
+.cards-container2 {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 5vw;
+}
+
+.card {
+  background-color: #F1EFF0;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  width: 100%;
+}
+
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(.43, .41, .22, .91);
+}
+
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+  /* 16:9 Aspect Ratio */
+}
+
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.card__title {
+  color: #696969;
+  font-family: Museo-3;
+  font-size: 1.25rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.card__text {
+  flex: 1 1 auto;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
 }
 
 .btn {
@@ -35,115 +100,23 @@ img {
 }
 
 .btn:hover {
-	background-color: #F29F05;
-	transition: all ease-in-out .5s;
-  }
- 
-.cards {
-width: 100vw;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px,1fr));
+  background-color: #F29F05;
+  transition: all ease-in-out 0.5s;
 }
 
-.cards__item {
-  display: flex;
-  padding: 1rem;
-  @media(min-width: 40rem) {
-    width: 50%;
+/* Responsividad */
+@media (max-width: 768px) {
+  .cards {
+    grid-template-columns: 1fr;
   }
-  @media(min-width: 56rem) {
-    width: 33.3333%;
+
+  .cards__item {
+    width: 100%;
   }
 }
 
-.cards-container2{
-	display: flex;
-  padding: 0 5vw;
-}
-.card {
-  background-color: #F1EFF0;
-  border-radius: 0.25rem;
-  box-shadow: 0 20px 40px -14px rgba(0,0,0,0.25);
-  display: flex;
-  flex-direction: column;
-  overflow: hidden;
- width: 100%;;
-  
-}
-
-.card:hover + .card__image {
-      filter: contrast(100%);
-    }
-  
-
-.card__content {
-  display: flex;
-  flex: 1 1 auto;
-  flex-direction: column;
-  padding: 1rem;
-}
-
-.card__image {
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-top-left-radius: 0.25rem;
-  border-top-right-radius: 0.25rem;
-  filter: contrast(70%);
-  overflow: hidden;
-  position: relative;
-  transition: filter 0.5s cubic-bezier(.43,.41,.22,.91);
-}
-
-.card__image::before {
-    content: "";
-	  display: block;
-    padding-top: 56.25%; 
-  }
-
-  @media(min-width: 40rem) {
-    .card__image::before {
-      padding-top: 66.6%; 
-    }}
-
-.card__image-1 {
-  background-image: url(../images/img1.jpg);
-}
-
-.card__image-2 {
-  background-image: url(../images/img2.jpg);
-}
-
-.card__image-3 {
-  background-image: url(../images/img3.jpg);
-}
-
-.card__image-4 {
-  background-image: url(../images/img4.jpg);
-}
-
-.card__title {
-  color: #696969;
-  font-family: Museo-3;
-  font-size: 1.25rem;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-
-.card__text {
-  flex: 1 1 auto;
-  font-size: 0.875rem;
-  line-height: 1.5;
-  margin-bottom: 1.25rem;
-}
-
-@media only screen 
-and (device-width < 500px) 
-and (device-height < 1000px) {
-  .presentación-pr{
+@media only screen and (device-width < 500px) and (device-height < 1000px) {
+  .presentación-pr {
     width: 90vw;
     margin: 10vh 0 0 5vw;
   }
@@ -152,25 +125,25 @@ and (device-height < 1000px) {
     font-size: 2.3em;
   }
 
-  h1{
+  h1 {
     font-size: 3em;
     margin-bottom: 0.4vh;
   }
 
   .cards__item {
-    min-width: 90vw
+    min-width: 90vw;
   }
 
   .cards {
-      display: flex;
-      flex-direction: column;
-    }
+    display: flex;
+    flex-direction: column;
+  }
 
-    .card__title {
-      font-size: 1.5rem;
-    }
-    
-    .card__text {
-      font-size: 1em;
-    }
+  .card__title {
+    font-size: 1.5rem;
+  }
+
+  .card__text {
+    font-size: 1em;
+  }
 }

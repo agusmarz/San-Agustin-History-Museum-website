@@ -1,6 +1,6 @@
 #about {
   display: flex;
-  margin: 5vh 13vw 0 13vw;
+  margin: 5vh 0 0 0;
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -35,7 +35,7 @@
 .grid-container {
   display: grid;
   width: 100%;
-  grid-gap: 10px;
+  grid-gap: 0;
   grid-template-columns: repeat(2, minmax(40px, 1fr));
   grid-template-rows: repeat(4, minmax(60px, 1fr));
   grid-auto-rows: 50px;
@@ -48,7 +48,83 @@
   height: 100%;
 }
 
+.themes-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem 0;
+  margin: 0 3vw 0 3vw;
+}
 
+.theme-section {
+  flex: 1 1 300px;
+  /* Ajusta el tamaño mínimo de cada sección */
+  padding: 2rem;
+  background-color: #f1eff9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+  /* Asegúrate de que haya espacio entre las secciones */
+}
+
+.theme-section h3 {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #2a3c4d;
+  padding-bottom: 0.5rem;
+}
+
+.grid-container2 {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.grid-container2 figure {
+  position: relative;
+  margin: 0;
+  transition: transform 0.3s ease;
+  flex: 1 1 300px;
+  /* Ajusta el tamaño mínimo de cada figura */
+}
+
+.grid-container2 img {
+  width: 100%;
+  /* La imagen se ajusta al ancho del contenedor */
+  max-width: 100%;
+  /* Asegura que la imagen no se agrande más allá de su tamaño original */
+  height: auto;
+
+  /* Mantiene la proporción de la imagen */
+  object-fit: contain;
+  /* Ancho fijo */
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.grid-container2 figcaption {
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.9);
+  margin-top: -5px;
+  border-radius: 0 0 8px 8px;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .theme-section h2 {
+    font-size: 1.5rem;
+  }
+}
 
 .grid-container1 img:first-child {
   grid-column: 1 / 3;
@@ -60,27 +136,16 @@
 }
 
 .grid-container1 img:nth-child(3) {
+
   grid-row: 3 / 5;
   object-position: top;
 }
 
-.grid-container2 img:first-child {
-  grid-column: 1 / 2;
-  grid-row: 1 / 5;
-}
-
-.grid-container2 img:nth-child(2) {
-  grid-row: 1 / 3;
-}
-
-.grid-container2 img:nth-child(3) {
-  grid-row: 3 / 5;
-}
 
 @media (max-width: 1350px) {
   #about {
     flex-direction: column;
-    margin: 7vh 10vw 0 10vw;
+    margin: 7vh 5vw 0 5vw;
   }
 
   .about-container {

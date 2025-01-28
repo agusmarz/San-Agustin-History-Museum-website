@@ -47,9 +47,16 @@ body {
 	padding-bottom: 400px;
 }
 
-h1,
 h2 {
+	font-size: 1.8rem;
+}
+
+h1,
+h2,
+h3 {
 	font-family: Museo700;
+	color: #1b1b1b;
+
 }
 
 header {
@@ -169,6 +176,7 @@ footer {
 
 .footer-content h3 {
 	font-size: 1.8rem;
+	color: #f1eff9;
 	font-family: Museo-3;
 	text-transform: capitalize;
 	line-height: 3rem;

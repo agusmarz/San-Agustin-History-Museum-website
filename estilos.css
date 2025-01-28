@@ -31,7 +31,7 @@ h1 {
 .datos p {
 	font-weight: 500;
 	text-align: center;
-	font-size: 1.5em;
+	font-size: 2em;
 }
 
 .galería {
@@ -398,7 +398,7 @@ textarea {
 	}
 
 	.datos p {
-		font-size: 2em;
+		font-size: 3.3em;
 		margin-top: 0.4em;
 	}
 
@@ -407,7 +407,8 @@ textarea {
 	}
 
 	.title-container p {
-		font-size: 2em;
+		font-size: 2.2em;
+		width: 90vw;
 	}
 
 	.form {
@@ -438,22 +439,22 @@ textarea {
 
 	.card {
 		min-width: 90%;
-		height: 45em;
+		height: 70em;
 	}
 
 
 
 	.personal-info p:first-of-type {
-		font-size: 3em;
+		font-size: 3.5em;
 	}
 
 	.personal-info p:nth-of-type(2) {
-		font-size: 2.4em;
+		font-size: 2.9em;
 		margin-bottom: 0.4em;
 	}
 
 	.personal-info p {
-		font-size: 2em;
+		font-size: 2.9em;
 	}
 
 	#mapa {
@@ -462,6 +463,6 @@ textarea {
 	}
 
 	.redes .marron i {
-		font-size: 2.4em;
+		font-size: 3.4em;
 	}
 }

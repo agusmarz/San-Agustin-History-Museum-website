@@ -236,6 +236,9 @@ footer {
 
 
 @media(max-width:991px) {
+	header .logo-img {
+		width: 30vw;
+	}
 
 	header {
 		padding: 20px;
@@ -274,9 +277,12 @@ footer {
 }
 
 @media only screen and (device-width < 500px) and (device-height < 1000px) {
-
 	header .logo-img {
-		width: 30vw;
+		width: 50vw;
+	}
+
+	p {
+		font-size: 2em;
 	}
 
 	header .navbar ul li a {

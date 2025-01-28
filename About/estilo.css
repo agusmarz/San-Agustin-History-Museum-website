@@ -170,8 +170,14 @@
     height: 700px;
   }
 
+
+
+  figcaption {
+    font-size: 2.3em;
+  }
+
   .about-container p {
-    font-size: 1.2em;
+    font-size: 2em;
     margin: 1em 0;
   }
 
@@ -185,8 +191,10 @@
   }
 
   .about-container {
-    margin: 0;
+    margin: 5vh 0 0 0;
     min-width: 90vw;
+    padding: 3em;
+
   }
 
   .about-container__colección {
